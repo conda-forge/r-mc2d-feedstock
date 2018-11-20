@@ -14,9 +14,9 @@ source:
   sha256: e30d8e826ce3ea0e7b2612fbfea98982019b5ccc7bcbeb166e7a056374455cd2
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,8 +43,7 @@ about:
     Second-Order Monte-Carlo simulations. Also includes various distributions (pert,
     triangular, Bernoulli, empirical discrete and continuous).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
