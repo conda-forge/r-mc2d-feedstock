@@ -1,4 +1,4 @@
-{% set version = '0.1-18' %}
+{% set version = "0.1-19" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: mc2d_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/mc2d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mc2d/mc2d_{{ version }}.tar.gz
-  sha256: e30d8e826ce3ea0e7b2612fbfea98982019b5ccc7bcbeb166e7a056374455cd2
+  sha256: d151691cbafc06d0f32821bec6364ada07753ae879f8cee3563ebcc81ea19040
 
 build:
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1003
   rpaths:
     - lib/R/lib/
     - lib/
@@ -38,19 +37,12 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=mc2d
-  license: GPL (>= 2)
-  summary: A complete framework to build and study Two-Dimensional Monte-Carlo simulations, aka
-    Second-Order Monte-Carlo simulations. Also includes various distributions (pert,
-    triangular, Bernoulli, empirical discrete and continuous).
+  license: GPL-2.0-or-later
+  summary: A complete framework to build and study Two-Dimensional Monte-Carlo simulations, aka Second-Order Monte-Carlo simulations. Also includes various distributions (pert, triangular, Bernoulli, empirical discrete and continuous).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
