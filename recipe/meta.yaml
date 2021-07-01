@@ -1,4 +1,4 @@
-{% set version = "0.1-19" %}
+{% set version = "0.1-20" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mc2d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mc2d/mc2d_{{ version }}.tar.gz
-  sha256: d151691cbafc06d0f32821bec6364ada07753ae879f8cee3563ebcc81ea19040
+  sha256: 1af04cf8c6f1854c5f0054f4f61fb35f39fa37c449a5a81210f502d98a7061dc
 
 build:
   merge_build_host: true  # [win]
