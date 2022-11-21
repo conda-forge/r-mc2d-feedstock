@@ -1,4 +1,4 @@
-{% set version = "0.1-21" %}
+{% set version = "0.1-22" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mc2d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mc2d/mc2d_{{ version }}.tar.gz
-  sha256: b1225952330d23199ee472130ba2ba811acb3f1fe289370a0046cc7ba2eae7ee
+  sha256: bdbdcd957807559bf96e7ac82444a0748df992b7e1a149b3b1962d2a25622120
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
