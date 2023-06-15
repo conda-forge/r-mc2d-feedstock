@@ -1,11 +1,11 @@
-About r-mc2d
-============
+About r-mc2d-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mc2d-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=mc2d
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mc2d-feedstock/blob/main/LICENSE.txt)
 
 Summary: A complete framework to build and study Two-Dimensional Monte-Carlo simulations, aka Second-Order Monte-Carlo simulations. Also includes various distributions (pert, triangular, Bernoulli, empirical discrete and continuous).
 
