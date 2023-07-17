@@ -23,11 +23,16 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-ggplot2
+    - r-ggpubr
     - r-mvtnorm
   run:
     - r-base
+    - r-ggplot2
+    - r-ggpubr
     - r-mvtnorm
 
 test:
