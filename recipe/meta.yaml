@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mc2d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mc2d/mc2d_{{ version }}.tar.gz
-  sha256: be27fcc1fb43c3f3fd4d1e443c1ff44dc90eba83852b56526b9489ba4b517b1a
+  sha256: dea45c2e8aa9f0089e268427428d239ed794ba52aa6a82f180819adf4ad22a05
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
